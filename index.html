@@ -486,7 +486,24 @@
             <i class="fe fe-x"></i>
           </button>
     
-          <!--  -->
+          <!-- Navigation -->
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+              <a id="platform-button" class="nav-link" aria-haspopup="true">
+                Platform
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a id="features-button" class="nav-link" aria-haspopup="true">
+                Features
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a id="contact-button" class="nav-link" aria-haspopup="true">
+                Contact
+              </a>
+            </li>
+          </ul>
     
           <!-- Button -->
           <a
@@ -498,6 +515,33 @@
           </a>
         </div>
       </div>
+      <script>
+        document.getElementById("platform-button").onclick = () => {
+          document
+            .getElementById("platform-page")
+            .scrollIntoView({ behavior: "smooth" });
+    
+          document.getElementById("navbarCollapse").classList.remove("show");
+          document.querySelector("html").style.overflow = null;
+        };
+        document.getElementById("features-button").onclick = () => {
+          document
+            .getElementById("features-page")
+            .scrollIntoView({ behavior: "smooth" });
+    
+          document.getElementById("navbarCollapse").classList.remove("show");
+          document.querySelector("html").style.overflow = null;
+        };
+    
+        document.getElementById("contact-button").onclick = () => {
+          document
+            .getElementById("contact-page")
+            .scrollIntoView({ behavior: "smooth" });
+    
+          document.getElementById("navbarCollapse").classList.remove("show");
+          document.querySelector("html").style.overflow = null;
+        };
+      </script>
     </nav>
 
     <!-- WELCOME -->
@@ -726,7 +770,7 @@
           </div>
         </div>
         <!-- / .row -->
-        <div class="row align-items-center">
+        <div id="platform-page" class="row align-items-center">
           <div class="col-12 col-md-7 col-lg-6" data-aos="fade-right">
             <!-- Heading -->
             <h2>
@@ -795,6 +839,102 @@
       <!-- / .container -->
     </section>
 
+    <div class="container mt-10" id="features-page">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 text-center">
+
+          <!-- Heading -->
+          <h1 class="display-2 text-primary">
+           Features
+          </h1>
+
+          <!-- Text -->
+          <p class="lead text-blue-100 mb-6 mb-md-8">
+            Save your time by automating customer support and take your business to the next level with ChatIQ.
+          </p>
+
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container --
+
+     <!-- CATEGORIES -->
+     <section class="mt-5">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+
+            <!-- Card -->
+            <div class="card card-border border-primary shadow-lg mb-6 mb-md-8 lift lift-lg">
+              <div class="card-body text-center">
+
+                <!-- Icon -->
+                <div class="icon-circle bg-primary text-white mb-5">
+                  <i class="fe fe-users"></i>
+                </div>
+
+                <!-- Text -->
+                <p class="text-gray-700 mb-5">
+                  AI bot functionality helps to automate up to 60% of repetitive customer support tasks, which is supported in 100+ languages.
+                </p>
+
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+
+            <!-- Card -->
+            <div class="card card-border border-success shadow-lg mb-6 mb-md-8 lift lift-lg">
+              <div class="card-body text-center">
+
+                <!-- Icon -->
+                <div class="icon-circle bg-success text-white mb-5">
+                  <i class="fe fe-users"></i>
+                </div>
+
+                <!-- Heading -->
+
+                <!-- Text -->
+                <p class="text-gray-700 mb-5">
+                  Payment gateway integration that combines invoicing and payments with a messaging solution and allows users to generate invoices instantly during the conversation. List supported payment gateways, where invoices can be generated in 180 currencies, etc.
+                </p>
+
+
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+
+            <!-- Card -->
+            <div class="card card-border border-warning shadow-lg mb-6 mb-md-8 lift lift-lg">
+              <div class="card-body text-center">
+
+                <!-- Icon -->
+                <div class="icon-circle bg-warning text-white mb-5">
+                  <i class="fe fe-users"></i>
+                </div>
+
+
+
+                <!-- Text -->
+                <p class="text-gray-700 mb-5">
+                  Mobile apps that make it possible for the customer support agents to handle customer inquiries right from their mobile phones.
+
+                </p>
+
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+    </section>
+
 
     <!-- WELCOME -->
     <section class="pt-8 pt-md-11 pb-10 pb-md-15 bg-primary mt-10">
@@ -849,6 +989,8 @@
       <div class="shape shape-bottom shape-fluid-x text-light">
         <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"/></svg>      </div>
     </div>
+
+
 
     <!-- PRICING -->
     <section class="mt-n8 mt-md-n14" >
@@ -1134,6 +1276,90 @@
         </div> <!-- / .row -->
       </div> <!-- / .container -->
     </section>
+
+    <!-- FORM -->
+    <section id="contact-page" class="pt-8 pt-md-11 pb-8 pb-md-14">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8 text-center">
+
+            <!-- Heading -->
+            <h2 class="fw-bold">
+              Let us hear from you directly!
+            </h2>
+
+            <!-- Text -->
+            <p class="fs-lg text-muted mb-7 mb-md-9">
+              We always want to hear from you! Let us know how we can best help you and we'll do our very best.
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-12 col-lg-10">
+
+            <!-- Form -->
+            <form>
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="form-group mb-5">
+
+                    <!-- Label -->
+                    <label class="form-label" for="contactName">
+                      Full name
+                    </label>
+
+                    <!-- Input -->
+                    <input class="form-control" id="contactName" type="text" placeholder="Full name">
+
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="form-group mb-5">
+
+                    <!-- Label -->
+                    <label class="form-label" for="contactEmail">
+                      Email
+                    </label>
+
+                    <!-- Input -->
+                    <input class="form-control" id="contactEmail" type="email" placeholder="hello@domain.com">
+
+                  </div>
+                </div>
+              </div> <!-- / .row -->
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group mb-7 mb-md-9">
+
+                    <!-- Label -->
+                    <label class="form-label" for="contactMessage">
+                      What can we help you with?
+                    </label>
+
+                    <!-- Input -->
+                    <textarea class="form-control" id="contactMessage" rows="5" placeholder="Tell us what we can help you with!"></textarea>
+
+                  </div>
+                </div>
+              </div> <!-- / .row -->
+              <div class="row justify-content-center">
+                <div class="col-auto">
+
+                  <!-- Submit -->
+                  <button type="submit" class="btn btn-primary lift">
+                    Send message
+                  </button>
+
+                </div>
+              </div> <!-- / .row -->
+            </form>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
 
     <!-- SHAPE -->
     <div class="position-relative">
